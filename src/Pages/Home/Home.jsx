@@ -1,5 +1,5 @@
 
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import Brands from "../../components/Body/Brands";
 import Footer from "../../components/Footer/Footer";
 import { useState } from "react";
@@ -7,7 +7,9 @@ import { useState } from "react";
 const Home = () => {
     const loadedData = useLoaderData()
     
-    const [brands, setBrands] = useState(loadedData)
+    const [brands, setBrands] = useState(loadedData);
+    
+    
     return (
         <div>
             {/* <Banner></Banner> */}
@@ -22,7 +24,7 @@ const Home = () => {
                 }
             </div>
 
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     );
 };

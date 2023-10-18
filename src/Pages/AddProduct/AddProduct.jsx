@@ -24,6 +24,9 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                if(data.acknowledged){
+                    alert('user creade')
+                }
             })
     }
     return (
@@ -52,12 +55,12 @@ const AddProduct = () => {
                             <span className="label-text">Brand Name</span>
                         </label>
                         <select name="brand" className="input input-bordered">
-                            <option value="disney">Disney</option>
-                            <option value="netflix">Netflix</option>
-                            <option value="warnerBrows">Warner Brows</option>
-                            <option value="sony">Sony Picture</option>
-                            <option value="spotify">Spotify</option>
-                            <option value="timeWarner">Time Warner</option>
+                            <option value="Disney">Disney</option>
+                            <option value="Netflix">Netflix</option>
+                            <option value="Warner Bros">Warner Brows</option>
+                            <option value="Sony Picture">Sony Picture</option>
+                            <option value="Amazon Prime">Amazon Prime</option>
+                            <option value="Hoichoi">Hoichoi</option>
                         </select>
                     </div>
 
