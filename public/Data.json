@@ -1,26 +1,44 @@
 [
   {
     "brand": "Disney",
-    "brand_photo": "https://i.ibb.co/SxnwZQK/Disney.jpg"
+    "brand_photo": "https://i.ibb.co/SxnwZQK/Disney.jpg",
+    "advertisement1": "https://i.ibb.co/K0tgYjN/add1.webp",
+    "advertisement2": "https://i.ibb.co/KyMYhGN/add2.webp",
+    "advertisement3": "https://i.ibb.co/sqgXXVY/add3.jpg"
   },
   {
     "brand": "Netflix",
-    "brand_photo": "https://i.ibb.co/wsPy4nB/Netflix11.jpg"
+    "brand_photo": "https://i.ibb.co/wsPy4nB/Netflix11.jpg",
+    "advertisement1": "https://i.ibb.co/q7YdvPf/net1.jpg",
+    "advertisement2": "https://i.ibb.co/mtVGy4y/net2.jpg",
+    "advertisement3": "https://i.ibb.co/6t5DSyW/net3.jpg"
   },
   {
     "brand": "Warner Bros",
-    "brand_photo": "https://i.ibb.co/tZDJHhN/Warner-bros.jpg"
+    "brand_photo": "https://i.ibb.co/tZDJHhN/Warner-bros.jpg",
+    "advertisement1": "https://i.ibb.co/JyDdyZF/war1.jpg",
+    "advertisement2": "https://i.ibb.co/ydZdpKx/war2.jpg",
+    "advertisement3": "https://i.ibb.co/4Tytmf5/war3.jpg"
   },
   {
     "brand": "Sony Picture",
-    "brand_photo": "https://i.ibb.co/NSyYxcP/Sony-Pictures-Television-logo.jpg"
+    "brand_photo": "https://i.ibb.co/NSyYxcP/Sony-Pictures-Television-logo.jpg",
+    "advertisement1": "https://i.ibb.co/jyvK8Tv/sony1.jpg",
+    "advertisement2": "https://i.ibb.co/x3NFxJv/sony2.jpg",
+    "advertisement3": "https://i.ibb.co/XWzyp8Y/sony3.jpg"
   },
   {
     "brand": "Amazon Prime",
-    "brand_photo": "https://i.ibb.co/sb77TBj/amazon-logo.png"
+    "brand_photo": "https://i.ibb.co/sb77TBj/amazon-logo.png",
+    "advertisement1": "https://i.ibb.co/MD20MB3/prime1.jpg",
+    "advertisement2": "https://i.ibb.co/gDk7bgp/prime2.jpg",
+    "advertisement3": "https://i.ibb.co/3B954KV/prime3.jpg"
   },
   {
     "brand": "Hoichoi",
-    "brand_photo": "https://i.ibb.co/h9NHx41/hoiichoi.png"
+    "brand_photo": "https://i.ibb.co/h9NHx41/hoiichoi.png",
+    "advertisement1": "https://i.ibb.co/wQP7RDY/hoichoi1.jpg",
+    "advertisement2": "https://i.ibb.co/HGZfTsw/hoichoi2.jpg",
+    "advertisement3": "https://i.ibb.co/RzLKQPh/hoichoi3.jpg"
   }
 ]

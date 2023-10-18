@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Product from "./Product";
 import { useEffect, useState } from "react";
+import Slider from "./Slider";
 
 const BrandProducts = () => {
     const { brand } = useParams();
@@ -20,21 +21,20 @@ const BrandProducts = () => {
         <div>
             <h2>Brand Name: {brand}</h2>
             {/* slider */}
-
+            <div>
+                {advertisements.map(add=> <Slider key={add.brand} add={add}></Slider>)}
+            </div>
 
             {/* Products */}
-            <div >
+
+            <h1 className="text-5xl text-center">Products</h1>
+            <div className={products.length > 0 ? "grid grid-cols-1 gap-5 md:grid-cols-2  lg:grid-cols-3" : "block"}>
                 {
-                    products.length > 0 ? <div>
-                        <div>
-                            {advertisements.map(add => <div key={add.brand}><img src={add.brand_photo} alt="" /></div>)}
-                        </div>
-                        <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">{products.map(product => <div key={product._id}><Product product={product}></Product></div>)}</div>
-                    </div>
-
-
-
-                        : <div className="  h-screen flex justify-center items-center"><div className="  "> currently No data Available </div></div>
+                    products.length > 0 ? products.map(product => <div key={product._id}><Product product={product}></Product></div>) 
+                    
+                    
+                    
+                    : <div className="   flex justify-center items-center"><div className="  "> currently No Products Available please add some products </div></div>
                 }
             </div>
 
