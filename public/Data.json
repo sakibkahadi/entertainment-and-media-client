@@ -1,0 +1,26 @@
+[
+  {
+    "brand": "Disney",
+    "brand_photo": "https://i.ibb.co/SxnwZQK/Disney.jpg"
+  },
+  {
+    "brand": "Netflix",
+    "brand_photo": "https://i.ibb.co/wsPy4nB/Netflix11.jpg"
+  },
+  {
+    "brand": "Warner Bros",
+    "brand_photo": "https://i.ibb.co/tZDJHhN/Warner-bros.jpg"
+  },
+  {
+    "brand": "Sony Pictures",
+    "brand_photo": "https://i.ibb.co/NSyYxcP/Sony-Pictures-Television-logo.jpg"
+  },
+  {
+    "brand": "Spotify",
+    "brand_photo": "https://i.ibb.co/G3WtppM/Spotify.jpg"
+  },
+  {
+    "brand": "Time Warner",
+    "brand_photo": "https://i.ibb.co/LR5JymS/Time-Warner.jpg"
+  }
+]
