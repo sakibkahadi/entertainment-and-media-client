@@ -8,7 +8,7 @@ const SingleProducts = () => {
     const handleAddToCart = (e)=>{
         e.preventDefault();
         const data = loadedData;
-        console.log(data)
+        
         //post 
         fetch('http://localhost:5000/carts',{
             method: "POST",
