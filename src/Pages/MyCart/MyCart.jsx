@@ -21,6 +21,7 @@ const MyCart = () => {
             if(data.deletedCount >0){
                 console.log('deleted successfully')
 
+                //remove the user from ui
                 const remainingUsers = carts.filter(user=>user._id !==id);
                 setCarts(remainingUsers)
             }
