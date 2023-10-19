@@ -1,5 +1,5 @@
 
-import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData,  } from "react-router-dom";
 import Brands from "../../components/Body/Brands";
 import Footer from "../../components/Footer/Footer";
 import { useState } from "react";

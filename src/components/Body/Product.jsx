@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 
 
 
 const Product = ({ product }) => {
-    const { photo, productName, brand, type, price, rating, description } = product;
+    const {_id, photo, productName, brand, type, price, rating, description } = product;
+    
    
 
     return (
@@ -22,11 +24,12 @@ const Product = ({ product }) => {
                     </div>
                 </div>
 
-                <p>{description}</p>
-                <div className="flex justify-between w-1/2 gap-5">
-                    <button className="btn btn-error w-full">Show Details</button>
-                    <button className="btn btn-success w-full">Update</button>
-                </div>
+                
+                
+                    <Link to={`/details/${_id}`}><button className="btn btn-error w-full">Show Details</button></Link>
+                    <Link to={`/products/${_id}`}><button className="btn btn-success w-full">Update</button></Link>
+                    
+                
             </div>
         </div>
     );
