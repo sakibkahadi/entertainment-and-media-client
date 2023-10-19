@@ -1,27 +1,58 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Routes/AuthProvider";
-
+import Swal from "sweetalert2";
+import { FcGoogle } from "react-icons/fc";
 const SignIn = () => {
 
-    const { googleLogIn } = useContext(AuthContext)
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+   
+    const authInfo = useContext(AuthContext);
+    const { login, googleSignIn } = authInfo;
+    const location = useLocation();
+    const navigate = useNavigate();
 
-    const handleGoogleLogIn = () => {
-        googleLogIn()
+
+
+    const handleLogin = e => {
+        e.preventDefault();
+        
+        login(email, password)
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state? location.state : '/')
             })
-            .then(err => { console.log(err) })
+            .catch(() => {
+                return Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please enter valid email or password',
+                    
+                  })
+            })
+
     }
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state? location.state : '/')
+            })
+            .catch((error) => console.log(error))
+    }
+
+
     return (
-        <div>
+        <div className="space-y-5 mt-5 overflow-x-hidden">
+
             <h2 className="text-sm md:text-xl text-center">Welcome Back. Please Login to your Account</h2>
             <div className="hero   ">
                 <div className="w-full md:w-1/2">
 
                     <div className="card  ">
                         <div className="card-body ">
-                            <form  >
+                            <form onSubmit={handleLogin} >
                                 <div className="grid grid-cols-2 gap-2">
 
                                 </div>
@@ -29,13 +60,13 @@ const SignIn = () => {
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" name="email" placeholder="Type your Email" className="input input-bordered" required />
+                                    <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" placeholder="Type your Email" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" name="password" placeholder="Type your Password" className="input input-bordered" required />
+                                    <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Type your Password" className="input input-bordered" required />
 
                                 </div>
                                 <div className="form-control mt-6">
@@ -44,8 +75,7 @@ const SignIn = () => {
 
                             </form>
                             <div className=" flex justify-center">
-                                <button  onClick={handleGoogleLogIn }
-                                 className="flex gap-3 items-center btn text-xl rounded-3xl mt-5 hover:bg-slate-100 font-normal bg-white text-black w-full" ><span></span> <span className=" ">Google</span></button>
+                                <button className="flex gap-3 items-center btn text-xl rounded-3xl mt-5 hover:bg-slate-100 font-normal bg-white text-black w-full" onClick={handleGoogleSignIn}><span><FcGoogle /></span> <span className=" ">Google</span></button>
                             </div>
                         </div>
 
@@ -58,6 +88,8 @@ const SignIn = () => {
             <div className="text-center">
                 Don't you have an account? <span className="text-blue-500"><Link to="/register">Sign up</Link></span>
             </div>
+            
+
         </div>
     );
 };

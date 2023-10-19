@@ -12,7 +12,7 @@ const Brands = ({ b }) => {
     return (
         <div>
 
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card card-compact bg-base-100 px-2">
                 <figure><img className="w-full h-[300px]" src={brand_photo} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{brand}</h2>
