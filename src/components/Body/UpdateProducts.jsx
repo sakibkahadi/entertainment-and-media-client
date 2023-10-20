@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const UpdateProducts = () => {
@@ -27,8 +28,28 @@ const UpdateProducts = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+           
+            
+            if(data.modifiedCount){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Congratulation',
+                    text: 'Successfully Updated The Product',
+                    
+                  })
+            }
+            else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'opps! ',
+                    text: 'This is already Updated',
+                    
+                  })
+            }
+            
         })
+        
+        
     }
     return (
         <div className="card  shadow-2xl bg-base-100">

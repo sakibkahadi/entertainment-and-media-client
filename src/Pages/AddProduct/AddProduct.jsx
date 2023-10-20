@@ -1,3 +1,6 @@
+import Swal from "sweetalert2";
+import Navbar from "../../components/Header/Navbar";
+import { Link } from "react-router-dom";
 
 
 
@@ -23,14 +26,22 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                
                 if(data.acknowledged){
-                    alert('user creade')
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Congratulation!!',
+                        text: 'Successfully Added The product',
+                        
+                      })
+                      form.reset()
                 }
             })
     }
     return (
-        <div className="card  shadow-2xl bg-base-100">
+        <div>
+            <h1 className="mt-12 mb-12 text-5xl text text-center text-black font-bold">Add products</h1>
+            <div className="card  shadow-2xl bg-base-100">
             <form onSubmit={handleAddProduct} className="card-body ">
                 {/* first row  */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -111,12 +122,14 @@ const AddProduct = () => {
                     </div>
 
                 </div>
-                <div>
-                    <button type="submit" className="btn btn-error w-full">Add product</button>
+                <div className="mb-5">
+                    <button type="submit" className="btn btn-error w-full mb-5">Add product</button>
+                    <Link to="/"><button  className="btn btn-secondary w-full">Go Home</button></Link>
                 </div>
 
 
             </form>
+        </div>
         </div>
     );
 };

@@ -29,12 +29,12 @@ const BrandProducts = () => {
 
     return (
         <div>
-            <h2>Brand Name: {brand}</h2> 
+            <h2 className="text-5xl mb-8 text-center font-bold">{brand}</h2> 
             {/* slider */}
             <div>
             
 
-            <div className="carousel w-full">
+            <div className="carousel w-full mb-10">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={advertisement1} className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -62,14 +62,14 @@ const BrandProducts = () => {
 
              {/* Products */}
 
-            <h1 className="text-5xl text-center">Products</h1>
+            <h1 className="text-5xl text-center mb-10 font-semibold">Products</h1>
              <div className={products.length > 0 ? "grid grid-cols-1 gap-5 md:grid-cols-2  lg:grid-cols-3" : "block"}>
                 {
                     products.length > 0 ? products.map(product => <div key={product._id}><Product product={product}></Product></div>) 
                     
                     
                     
-                    : <div className="   flex justify-center items-center"><div className="  "> currently No Products Available please add some products </div></div>
+                    : <div className="   flex text-center mb-20 justify-center items-center px-20"><div className="  "> currently No Products Available please add some products </div></div>
                 }
             </div> 
 

@@ -46,7 +46,7 @@ const SignIn = () => {
     return (
         <div className="space-y-5 mt-5 overflow-x-hidden">
 
-            <h2 className="text-sm md:text-xl text-center">Welcome Back. Please Login to your Account</h2>
+            <h2 className="text-sm md:text-xl text-center mt-12">Welcome Back. Please Login to your Account</h2>
             <div className="hero   ">
                 <div className="w-full md:w-1/2">
 

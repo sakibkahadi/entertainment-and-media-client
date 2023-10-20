@@ -5,7 +5,7 @@ import { AuthContext } from "../../Routes/AuthProvider";
 
 
 
-const Navbar = () => {
+const Navbar = ({handleThemeSwitch}) => {
     const authInfo = useContext(AuthContext);
     const { user, logOut } = authInfo;
     const [open, setOpen] = useState(false)
@@ -55,6 +55,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <div className="">
+                
+                <input onClick={handleThemeSwitch} type="checkbox" className="toggle"  />
                     {user && <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn m-1">profile</label>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box ">
