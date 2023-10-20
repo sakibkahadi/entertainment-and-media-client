@@ -44,7 +44,10 @@ const Navbar = ({handleThemeSwitch}) => {
                         {navLinks}
                     </ul>
                 </div>
+                <div className="flex items-center gap-3">
+                    <img className="" src="https://i.ibb.co/718y6WT/icons8-multimedia-49.png" alt="" />
                 <a className=" normal-case text-xl md:text-2xl  lg:text-4xl ">Media Mingle</a>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
