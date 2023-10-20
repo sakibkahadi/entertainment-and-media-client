@@ -11,7 +11,7 @@ const SingleProducts = () => {
         const data = loadedData;
         
         //post 
-        fetch('http://localhost:5000/carts',{
+        fetch('https://entertainment-and-media-server-78wiweyy8-sakibkahadis-projects.vercel.app/carts',{
             method: "POST",
             headers: {
                 "content-type": "application/json"

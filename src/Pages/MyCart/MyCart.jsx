@@ -13,7 +13,7 @@ const MyCart = () => {
         // make sure user is confirm to delete
 
 
-        fetch(`http://localhost:5000/carts/${id}`, {
+        fetch(`https://entertainment-and-media-server-78wiweyy8-sakibkahadis-projects.vercel.app/carts/${id}`, {
             method: "DELETE"
         })
 

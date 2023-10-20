@@ -15,7 +15,7 @@ const BrandProducts = () => {
     },[loadedData, brand])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://entertainment-and-media-server-78wiweyy8-sakibkahadis-projects.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setProductsData(data))
     },[])

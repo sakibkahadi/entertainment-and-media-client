@@ -46,19 +46,19 @@ const myCreatedRoute = createBrowserRouter([
       {
         path:'/details/:id',
         element:<PrivateRoute><SingleProducts></SingleProducts></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({params})=>fetch(`https://entertainment-and-media-server-78wiweyy8-sakibkahadis-projects.vercel.app/products/${params.id}`)
         
       },
       {
         path:'/products/:id',
         element:<PrivateRoute><UpdateProducts></UpdateProducts></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({params})=>fetch(`https://entertainment-and-media-server-78wiweyy8-sakibkahadis-projects.vercel.app/products/${params.id}`)
         
       },
       {
         path: '/myCart',
         element:<MyCart></MyCart>,
-        loader: ()=>fetch('http://localhost:5000/carts')
+        loader: ()=>fetch('https://entertainment-and-media-server-78wiweyy8-sakibkahadis-projects.vercel.app/carts')
       }
       
 
