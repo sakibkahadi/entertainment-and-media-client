@@ -5,6 +5,7 @@ import Footer from "../../components/Footer/Footer";
 
 import Banner from "../../components/Header/Banner";
 import ChooseUs from "../../components/Body/ChooseUs";
+import AboutUs from "../../components/Body/AboutUs";
 
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
                 </div>
             </div>
             <ChooseUs></ChooseUs>
-
+            <AboutUs></AboutUs>
             <Footer></Footer>
         </div>
     );
